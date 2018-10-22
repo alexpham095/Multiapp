@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SoundBoard</string>
+    <string name="happy">Happy</string>
+    <string name="sad">Sad</string>
+
+    <string-array name="names">
+        <item>Home</item>
+        <item>Calculator</item>
+    </string-array>
+</resources>
