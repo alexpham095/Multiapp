@@ -2,6 +2,8 @@ package com.apham.multi_app;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -53,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else {
-                    Intent intent= new Intent(MainActivity.this, SecondActivity.class);
+                    Intent intent= new Intent(MainActivity.this, Email_Tabs.class);
                     startActivity(intent);
                 }
             }
@@ -67,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
                 R.layout.spinner_item, getResources().getStringArray(R.array.names));
         myAdapter.setDropDownViewResource(R.layout.spinner_item);
         mySpinner.setAdapter(myAdapter);
-
 
     }
 }
