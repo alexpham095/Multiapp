@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relative1"
     android:layout_width="match_parent"
@@ -9,8 +8,15 @@
 
     <EditText
         android:id="@+id/edt1"
-        android:layout_width="335dp"
-        android:layout_height="wrap_content" />
+        android:layout_width="244dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/calculator_input"
+        android:inputType=""
+        android:padding="20dp"
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/button1"
@@ -18,10 +24,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/button4"
-        android:layout_alignRight="@+id/button4"
         android:layout_below="@+id/edt1"
-        android:layout_marginTop="94dp"
-        android:text="1" />
+        android:layout_marginTop="60dp"
+        android:text="@string/_1" />
 
     <Button
         android:id="@+id/button2"
@@ -29,9 +34,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/button1"
-        android:layout_toLeftOf="@+id/button3"
         android:layout_toStartOf="@+id/button3"
-        android:text="2" />
+        android:text="@string/_2" />
 
     <Button
         android:id="@+id/button3"
@@ -40,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_alignTop="@+id/button2"
-        android:text="3" />
+        android:text="@string/_3" />
 
     <Button
         android:id="@+id/button4"
@@ -49,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/button2"
         android:layout_toStartOf="@+id/button2"
-        android:text="4" />
+        android:text="@string/_4" />
 
     <Button
         android:id="@+id/button5"
@@ -57,9 +61,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/button4"
-        android:layout_alignLeft="@+id/button2"
         android:layout_alignStart="@+id/button2"
-        android:text="5" />
+        android:text="@string/_5" />
 
 
     <Button
@@ -67,10 +70,9 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button3"
         android:layout_alignStart="@+id/button3"
         android:layout_below="@+id/button3"
-        android:text="6" />
+        android:text="@string/_6" />
 
     <Button
         android:id="@+id/button7"
@@ -78,28 +80,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/button4"
-        android:layout_toLeftOf="@+id/button2"
-        android:text="7" />
+        android:layout_alignStart="@id/button1"
+        android:text="@string/_7" />
 
     <Button
         android:id="@+id/button8"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button5"
         android:layout_alignStart="@+id/button5"
         android:layout_below="@+id/button5"
-        android:text="8" />
+        android:text="@string/_8" />
 
     <Button
         android:id="@+id/button9"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button6"
         android:layout_alignStart="@+id/button6"
         android:layout_below="@+id/button6"
-        android:text="9" />
+        android:text="@string/_9" />
 
     <Button
         android:id="@+id/buttonadd"
@@ -107,12 +107,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/edt1"
-        android:layout_alignRight="@+id/edt1"
         android:layout_alignTop="@+id/button3"
-        android:layout_marginLeft="46dp"
         android:layout_marginStart="46dp"
-        android:layout_toRightOf="@+id/button3"
-        android:text="+" />
+        android:text="@string/add" />
 
     <Button
         android:id="@+id/buttonsub"
@@ -120,22 +117,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/buttonadd"
-        android:layout_alignRight="@+id/buttonadd"
-        android:layout_alignLeft="@+id/buttonadd"
         android:layout_alignStart="@+id/buttonadd"
         android:layout_below="@+id/buttonadd"
-        android:text="-" />
+        android:text="@string/minus" />
 
     <Button
         android:id="@+id/buttonmult"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/buttonsub"
         android:layout_alignStart="@+id/buttonsub"
         android:layout_alignEnd="@+id/buttonsub"
         android:layout_below="@+id/buttonsub"
-        android:text="*" />
+        android:text="@string/mult" />
 
 
     <Button
@@ -144,28 +138,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/button7"
-        android:layout_toLeftOf="@+id/button2"
-        android:text="." />
+        android:layout_alignStart="@id/button1"
+        android:text="@string/deci" />
 
     <Button
         android:id="@+id/button0"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button8"
         android:layout_alignStart="@+id/button8"
         android:layout_below="@+id/button8"
-        android:text="0" />
+        android:text="@string/_0" />
 
     <Button
         android:id="@+id/buttonC"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button9"
         android:layout_alignStart="@+id/button9"
         android:layout_below="@+id/button9"
-        android:text="C" />
+        android:text="@string/clearButton" />
 
     <Button
         android:id="@+id/buttondiv"
@@ -173,22 +165,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/buttonmult"
-        android:layout_alignLeft="@+id/buttonmult"
-        android:layout_alignRight="@+id/buttonmult"
         android:layout_alignStart="@+id/buttonmult"
         android:layout_below="@+id/buttonmult"
-        android:text="/" />
+        android:text="@string/div" />
 
     <Button
         android:id="@+id/buttoneql"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/buttondiv"
-        android:layout_alignLeft="@+id/button10"
-        android:layout_alignRight="@+id/buttondiv"
         android:layout_alignStart="@+id/button10"
         android:layout_below="@+id/button0"
         android:layout_marginTop="37dp"
-        android:text="=" />
+        android:text="@string/equals" />
 
 </RelativeLayout>

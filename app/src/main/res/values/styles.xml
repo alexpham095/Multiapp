@@ -12,11 +12,18 @@
         <item name="android:textColorPrimary">@color/text_color_primary</item>
     </style>
 
-    <!-- Base application theme. -->
+    <!-- Fragment App Theme. -->
     <style name="FragmentAppTheme" parent="Theme.AppCompat.Light.NoActionBar">        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
 
 
+    <!-- Fragment App Theme. -->
+    <style name="RecyclerViewTheme" parent="Theme.AppCompat.Light.NoActionBar">        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#E91E63</item>
+        <item name="colorPrimaryDark">#C2185B</item>
+        <item name="colorAccent">#03A9F4</item>
+    </style>
 </resources>

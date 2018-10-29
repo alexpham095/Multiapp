@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SecondActivity" />
-        <activity android:name=".Email_Tabs"></activity>
+        <activity android:name=".Email_Tabs" />
+        <activity android:name=".DetailActivity"></activity>
     </application>
 
 </manifest>
