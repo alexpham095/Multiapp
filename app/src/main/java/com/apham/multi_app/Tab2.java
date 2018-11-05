@@ -1,12 +1,17 @@
 package com.apham.multi_app;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 
 
 /**
@@ -26,6 +31,8 @@ public class Tab2 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private ImageView imageView;
 
     private OnFragmentInteractionListener mListener;
 
@@ -50,6 +57,28 @@ public class Tab2 extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
+
+
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        Button btnCamera = (Button) getActivity().findViewById(R.id.btnCamera);
+        imageView = (ImageView) getActivity().findViewById((R.id.imageView));
+
+        btnCamera.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(intent, 0);
+            }
+        });
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode,resultCode, data);
+        Bitmap bitmap = (Bitmap)data.getExtras().get("data");
+        imageView.setImageBitmap(bitmap);
+    }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
