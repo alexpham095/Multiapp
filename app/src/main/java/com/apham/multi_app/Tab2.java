@@ -62,13 +62,13 @@ public class Tab2 extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        Button btnCamera = (Button) getActivity().findViewById(R.id.btnCamera);
-        imageView = (ImageView) getActivity().findViewById((R.id.imageView));
+        Button btnCamera = getActivity().findViewById(R.id.btnCamera);
+        imageView = getActivity().findViewById((R.id.imageView));
 
         btnCamera.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent, 0);
+                startActivity(intent);
             }
         });
     }
