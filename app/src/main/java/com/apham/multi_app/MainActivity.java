@@ -42,25 +42,26 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        Spinner mySpinner = (Spinner)findViewById(R.id.spinner);
+        final Spinner mySpinner = (Spinner) findViewById(R.id.spinner);
 
         mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l){
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
 
-                if(currentItem==position){
+                if (currentItem == position) {
                     return;
-                }
-                else if(position==1){
-                    Intent intent= new Intent(MainActivity.this, SecondActivity.class);
+                } else if (position == 1) {
+                    Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                    startActivity(intent);
+                } else {
+                    Intent intent = new Intent(MainActivity.this, Email_Tabs.class);
                     startActivity(intent);
                 }
-                else {
-                    Intent intent= new Intent(MainActivity.this, Email_Tabs.class);
-                    startActivity(intent);
-                }
+
+                mySpinner.setSelection(0);
+
             }
 
-            public void onNothingSelected(AdapterView<?> adapterView){
+            public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
         });
@@ -70,5 +71,7 @@ public class MainActivity extends AppCompatActivity {
         myAdapter.setDropDownViewResource(R.layout.spinner_item);
         mySpinner.setAdapter(myAdapter);
 
+
     }
+
 }

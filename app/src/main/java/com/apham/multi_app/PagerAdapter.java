@@ -33,11 +33,11 @@ public class PagerAdapter extends FragmentStatePagerAdapter{
     @Override public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "Tab 1";
+                return "Email";
             case 1:
-                return "Tab 2";
+                return "Camera";
             case 2:
-                return "Tab 3";
+                return "Recorder";
             default:
                 return null;
         }
